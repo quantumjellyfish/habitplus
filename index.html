@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Habit Plus</title>
-
+  <title>Habit Plus - Free Minimalist Habit Tracker</title>
   <style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: linear-gradient(
         135deg,
-        #0f2a24,
-        #1e4a3f,
-        #3a7d6b
+        #1a1625,
+        #2d2640,
+        #4a3f5c
       );
       color: #ffffff;
     }
-
     .container {
       max-width: 1200px;
       margin: auto;
@@ -27,69 +25,112 @@
       align-items: center;
       gap: 48px;
     }
-
     .label {
       font-size: 14px;
       letter-spacing: 2px;
-      opacity: 0.8;
+      opacity: 0.9;
       margin-bottom: 16px;
+      color: #d4af37;
     }
-
+    .free-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #d4af37, #f4d03f);
+      color: #1a1625;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
     h1 {
       font-size: 56px;
       line-height: 1.1;
       margin: 0 0 24px;
+      background: linear-gradient(135deg, #ffffff, #e8d4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-
     .subtitle {
       font-size: 18px;
       opacity: 0.85;
       max-width: 420px;
       margin-bottom: 32px;
+      color: #d8d8f0;
     }
-
     .button {
       display: inline-block;
-      background: #f5c16c;
-      color: #000;
-      padding: 14px 28px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, #d4af37, #f4d03f);
+      color: #1a1625;
+      padding: 16px 32px;
+      border-radius: 12px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+      transition: all 0.3s ease;
     }
-
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+    }
+    .free-text {
+      display: block;
+      font-size: 13px;
+      margin-top: 12px;
+      color: #d4af37;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
     .phone {
       display: flex;
       justify-content: center;
+      position: relative;
     }
-
+    .phone::before {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
     .phone img {
       max-width: 300px;
       border-radius: 32px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 1;
     }
-
     @media (max-width: 900px) {
       .container {
         grid-template-columns: 1fr;
         text-align: center;
       }
-
       h1 {
         font-size: 42px;
       }
-
+      .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
       .phone {
         margin-top: 48px;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <div>
       <div class="label">HABIT PLUS</div>
+      <div class="free-badge">100% FREE</div>
       <h1>
         Build habits<br>
         without pressure
@@ -105,8 +146,8 @@
       >
         Get it on Google Play
       </a>
+      <span class="free-text">✨ Free forever. No ads. No subscriptions.</span>
     </div>
-
     <div class="phone">
       <!-- Placeholder image for now -->
       <img src="https://via.placeholder.com/300x600?text=Habit+Plus" alt="Habit Plus App">
